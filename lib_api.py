@@ -38,3 +38,12 @@ def get_summoner_league(summoner_id, region, api_key):
         api_key
     )
     return get_json(url)
+
+
+def get_league_data(league_id_id, region, api_key):
+    url = 'https://{}.api.riotgames.com/lol/league/v3/leagues/{}?api_key={}'.format(
+        region,
+        league_id_id,
+        api_key
+    )
+    return get_json(url)

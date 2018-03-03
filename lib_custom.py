@@ -3,6 +3,8 @@
 import re
 
 def rate_pseudo(pseudo):
+    pseudo = pseudo.encode('utf-8').strip()
+
     # Capitalize
     if re.match(r'^[A-Z][a-z]+', pseudo):
         score = 1
